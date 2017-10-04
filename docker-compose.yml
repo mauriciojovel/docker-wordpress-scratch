@@ -29,7 +29,7 @@ services:
       MYSQL_USER: wordpress
       MYSQL_PASSWORD: wordpress
       MYSQL_DATABASE: site
-#      MYSQL_ROOT_PASSWORD: root
-      MYSQL_RANDOM_ROOT_PASSWORD: 1
+      MYSQL_ROOT_PASSWORD: toor
+#      MYSQL_RANDOM_ROOT_PASSWORD: 1
       MYSQL_INITDB_SKIP_TZINFO: 1
 
