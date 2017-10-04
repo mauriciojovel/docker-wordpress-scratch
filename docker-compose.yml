@@ -1,0 +1,35 @@
+version: "2"
+services:
+  wordpress:
+    image: wordpress:fpm
+    links:
+      - dbmysql:mysql
+    volumes:
+      - "./wordpress:/var/www/html"
+    environment:
+      WORDPRESS_DB_USER: wordpress
+      WORDPRESS_DB_PASSWORD: wordpress
+      WORDPRESS_DB_NAME: site
+      WORDPRESS_TABLE_PREFIX: site_
+  nginx:
+    image: raulr/nginx-wordpress
+    links:
+     - wordpress
+    volumes_from:
+     - wordpress
+    ports:
+     - "8080:80"
+    environment:
+      POST_MAX_SIZE: 128m
+  dbmysql:
+    image: mysql
+    volumes:
+      - "./scripts:/docker-entrypoint-initdb.d"
+    environment:
+      MYSQL_USER: wordpress
+      MYSQL_PASSWORD: wordpress
+      MYSQL_DATABASE: site
+#      MYSQL_ROOT_PASSWORD: root
+      MYSQL_RANDOM_ROOT_PASSWORD: 1
+      MYSQL_INITDB_SKIP_TZINFO: 1
+
