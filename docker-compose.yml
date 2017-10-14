@@ -18,7 +18,7 @@ services:
     volumes_from:
      - wordpress
     ports:
-     - "8080:80"
+     - 80:80
     environment:
       POST_MAX_SIZE: 128m
   dbmysql:
