@@ -4,7 +4,8 @@ Donate link: https://wpovernight.com/downloads/woocommerce-pdf-invoices-packing-
 Tags: woocommerce, pdf, invoices, packing slips, print, delivery notes, invoice, packing slip, export, email, bulk, automatic
 Requires at least: 3.5
 Tested up to: 4.8
-Stable tag: 2.0.13
+Requires PHP: 5.3
+Stable tag: 2.0.14
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -42,7 +43,7 @@ In addition to a number of default settings (including a custom header/logo) and
 
 = Minimum Requirements =
 
-* WooCommerce 2.0 or later
+* WooCommerce 2.2 or later
 * WordPress 3.5 or later
 
 = Automatic installation =
@@ -103,6 +104,12 @@ There's a setting on the Status tab of the settings page that allows you to togg
 == Changelog ==
 
 **2.0 is a BIG update! Make a full site backup before upgrading**
+
+= 2.0.14 =
+* Feature: Manually resend specific order emails in WooCommerce 3.2+
+* Tweak: Show full size logo preview in settings
+* Tweak: Custom field fallback to underscore prefixed meta key
+* Dev: added `wpo_wcpdf_before_sequential_number_increment` action
 
 = 2.0.13 =
 * Fix: Minor XSS issue on settings screens by escaping and sanitizing 'tab' & 'section' GET variables. Discovered by Detectify.
@@ -198,5 +205,5 @@ There's a setting on the Status tab of the settings page that allows you to togg
 
 == Upgrade Notice ==
 
-= 2.0.13 =
+= 2.0.14 =
 **2.0 is a BIG update! Make a full site backup before upgrading!**
