@@ -1,18 +1,19 @@
 version: "2"
 services:
   wordpress:
-    image: wordpress:fpm
+    build: ./docker/wordpress
     links:
       - dbmysql:mysql
     volumes:
-      - "./wordpress:/var/www/html"
+      - ./wordpress:/var/www/html
     environment:
       WORDPRESS_DB_USER: wordpress
       WORDPRESS_DB_PASSWORD: wordpress
       WORDPRESS_DB_NAME: site
       WORDPRESS_TABLE_PREFIX: site_
+      WORDPRESS_DB_HOST: mysql
   nginx:
-    image: raulr/nginx-wordpress
+    build: ./docker/nginx
     links:
      - wordpress
     volumes_from:
@@ -22,14 +23,18 @@ services:
     environment:
       POST_MAX_SIZE: 128m
   dbmysql:
-    image: mysql
+    build: ./docker/mysql
+    ports:
+      - 3037:3036
     volumes:
-      - "./scripts:/docker-entrypoint-initdb.d"
+      - ./scripts:/docker-entrypoint-initdb.d
     environment:
       MYSQL_USER: wordpress
       MYSQL_PASSWORD: wordpress
       MYSQL_DATABASE: site
       MYSQL_ROOT_PASSWORD: toor
-#      MYSQL_RANDOM_ROOT_PASSWORD: 1
       MYSQL_INITDB_SKIP_TZINFO: 1
-
+  npm-cli:
+    build: ./docker/node
+    volumes:
+      - ./wordpress:/app

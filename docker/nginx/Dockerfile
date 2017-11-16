@@ -1,0 +1,1 @@
+FROM raulr/nginx-wordpress
