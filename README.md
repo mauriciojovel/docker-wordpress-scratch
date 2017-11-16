@@ -41,3 +41,14 @@ mysql> CREATE DATABASE IF NOT EXISTS YOUR_DATABASE;
 mysql> GRANT ALL ON `YOUR_DATABASE`.* TO 'YOUR_USER'@'%' IDENTIFIED BY 'YOUR_PASSWORD';
 mysql> FLUSH PRIVILEGES ;
 ```
+
+##Recomended plugings
+1. [Loco Translate|https://wordpress.org/plugins/loco-translate/]
+2. [MailChimp for Wordpress|https://wordpress.org/plugins/mailchimp-for-wp/]
+3. [Woocommerce|https://woocommerce.com/]
+4. [Woocommerce pdf invoice|https://wordpress.org/plugins/woocommerce-pdf-invoices/]
+5. [Image Optimization|https://wordpress.org/plugins/wp-smushit/]
+6. [Yoast SEO|https://wordpress.org/plugins/wordpress-seo/]
+7. [Members|https://wordpress.org/plugins/members/]
+8. [Unconfirmed|https://wordpress.org/plugins/unconfirmed/]
+
