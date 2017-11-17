@@ -1,0 +1,9 @@
+.widget-wrapper {
+  margin-bottom: 3em;
+}
+.widget {
+  &__title {
+    font-size: 1.2em;
+    font-family: $raleway-bold;
+  }
+}

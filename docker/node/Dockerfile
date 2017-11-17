@@ -8,6 +8,6 @@ RUN apt-get update && apt-get install -y curl apt-transport-https && \
 RUN npm install -g gulp-cli
 RUN mkdir /app
 WORKDIR /app
-#COPY ./init.sh /node-init.sh
-#RUN chmod 755 /node-init.sh
-#ENTRYPOINT ["/node-init.sh"]
+COPY ./init.sh /node-init.sh
+RUN chmod 755 /node-init.sh
+ENTRYPOINT ["/node-init.sh"]

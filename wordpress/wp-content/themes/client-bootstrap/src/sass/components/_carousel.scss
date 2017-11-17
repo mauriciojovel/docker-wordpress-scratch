@@ -1,0 +1,71 @@
+.carousel {
+	margin: 0;
+
+	&__image {
+		height: auto;
+		width: auto;
+		max-width: 100%;
+		margin: 0 auto;
+		padding: 0 ($base-spacing / 2);
+
+		@include media-breakpoint-up(sm) {
+	    height: 90px;
+			width: auto;
+	  }
+
+	  &--small {
+	  	height: 50px;
+
+			@include media-breakpoint-up(sm) {
+		    height: 90px;
+		  }
+	  }
+	  &--big {
+			width: 200px;
+	  	height: auto;
+	  }
+	  &--full {
+			width: 100%;
+	  	height: auto;
+	  	padding: 0;
+	  }
+
+	}
+}
+
+#team-list .slick-slide {
+	padding: 5px;
+}
+
+// Slick overrides
+.carousel--primary .slick-dots {
+
+	li button:before {
+		content: "";
+		border: 1px solid $red;
+		border-radius: 50%;
+		opacity: 1;
+	}
+	li.slick-active button:before {
+		content: "";
+		border: 1px solid $red;
+		border-radius: 50%;
+		background-color: $red;
+	}
+}
+.carousel--secondary .slick-dots {
+	bottom: -15px;
+
+	li button:before {
+		content: "";
+		border: 1px solid $white;
+		border-radius: 50%;
+		opacity: 1;
+	}
+	li.slick-active button:before {
+		content: "";
+		border: 1px solid $white;
+		border-radius: 50%;
+		background-color: $white;
+	}
+}

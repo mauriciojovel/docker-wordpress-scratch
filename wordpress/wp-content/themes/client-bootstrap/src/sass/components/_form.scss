@@ -1,0 +1,59 @@
+.form {
+  max-width: 42em;
+  margin: 0 auto;
+
+  &__field {
+    display: block;
+    margin: ($base-spacing *2) 0;
+
+    // Hide CF7 br tags
+    br { display: none; }
+
+    &__mini {
+      margin: $base-spacing 0;
+    }
+  }
+
+  // CF7 style overrides
+  .wpcf7-not-valid-tip {
+    padding: ($base-spacing / 2);
+    color: $white;
+    background-color: lighten($red, 5%);
+  }
+  .wpcf7-response-output  {
+    margin: ($base-spacing * 5) 0;
+    padding: $base-spacing;
+    border: none;
+    color: $dark-blue;
+
+    &.wpcf7-validation-errors,
+    &.wpcf7-mail-sent-ng {
+      background-color: #f7e700;
+    }
+  }
+}
+
+.form-label {
+  display: block;
+  display: none;
+}
+
+.form-input {
+  width: 100%;
+  display: block;
+  padding: ($base-spacing * 1.5) $base-spacing;
+  font-weight: bold;
+  background-color: $gray;
+  border: none;
+  border-radius: 0;
+
+  &__mini {
+    padding: ($base-spacing * 0.667) $base-spacing;
+  }
+
+  &::placeholder {
+    color: $black;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+  }
+}

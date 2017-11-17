@@ -36,5 +36,11 @@ services:
       MYSQL_INITDB_SKIP_TZINFO: 1
   npm-cli:
     build: ./docker/node
+    links:
+      - nginx
+    ports:
+      - 3000:3000
+      - 3001:3001
     volumes:
-      - ./wordpress:/app
+      - ./wordpress/wp-content/themes/client-bootstrap:/app
+

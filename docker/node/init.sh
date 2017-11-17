@@ -1,6 +1,5 @@
 #!/bin/bash
 #Install de dependencies.
-#yarn install
+yarn install
 #Execute the gulp commands to create the assets
-#gulp sass
-#gulp js
+gulp

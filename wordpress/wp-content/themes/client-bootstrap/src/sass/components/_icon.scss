@@ -1,0 +1,23 @@
+// Social icons
+.list-icons {
+  text-align: center;
+}
+.list-icon {
+  display: inline-block;
+  margin: ($base-spacing * 2) $base-spacing;
+  
+  &__image {
+    height: 70px;
+    width: auto;
+    padding: 0 $base-spacing;
+
+    @include media-breakpoint-up(lg) {
+      height: 55px;
+    }
+
+  }
+  &__icon {
+  	width: 60px;
+    height: auto;
+  }
+}
