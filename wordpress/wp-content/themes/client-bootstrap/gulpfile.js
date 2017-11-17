@@ -19,6 +19,9 @@ var stylesOutput = './assets/css';
 var scriptsInput = './src/js/*.js';
 var scriptsOutput = './assets/js';
 
+var simpleInput = './src/sass/theme.scss';
+var simpleOutput = './assets/css';
+
 var sassOptions = {
   errLogToConsole: true,
   includePaths: ['node_modules'],
@@ -42,6 +45,18 @@ gulp.task('sass', function () {
     .pipe(autoprefixer(autoprefixerOptions))
     .pipe(sourcemaps.write('/maps'))
     .pipe(gulp.dest(stylesOutput))
+    .pipe(browserSync.stream());
+});
+
+// Simple
+gulp.task('simple', function () {
+  return gulp
+    .src(simpleInput)
+    .pipe(sourcemaps.init())
+    .pipe(sass(sassOptions).on('error', sass.logError))
+    .pipe(autoprefixer(autoprefixerOptions))
+    .pipe(sourcemaps.write('/maps'))
+    .pipe(gulp.dest(simpleOutput))
     .pipe(browserSync.stream());
 });
 

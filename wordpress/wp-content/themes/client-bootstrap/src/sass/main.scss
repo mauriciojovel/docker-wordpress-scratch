@@ -8,29 +8,29 @@
 // Base
 @import "base/variables";
 @import "base/typography";
-@import "base/helpers";
+// @import "base/helpers";
 
 // Partials
-@import "partials/header";
-@import "partials/footer";
-@import "partials/section";
+// @import "partials/header";
+// @import "partials/footer";
+// @import "partials/section";
 
 // Components
-@import "components/button";
-@import "components/hero";
-@import "components/logo";
-@import "components/menu";
-@import "components/widget";
-@import "components/icon";
-@import "components/carousel";
-@import "components/block";
-@import "components/thumbnail";
-@import "components/card";
-@import "components/form";
+// @import "components/button";
+// @import "components/hero";
+// @import "components/logo";
+// @import "components/menu";
+// @import "components/widget";
+// @import "components/icon";
+// @import "components/carousel";
+// @import "components/block";
+// @import "components/thumbnail";
+// @import "components/card";
+// @import "components/form";
 
 body {
-  font-size: 16px;
-  font-family: $font-primary;
+  font-size: $font-size-base;
+  font-family: $font-family-base;
   line-height: 1.5;
 }
 
