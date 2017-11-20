@@ -2,7 +2,7 @@
 1. Install docker.
 2. Clone the project:
 ```bash
-$ git clone --recursive git@github.com:mauriciojovel/bootstrap-sass-gulp-vanilla.git your-awesome-site
+$ git clone --recursive git@github.com:mauriciojovel/docker-wordpress-scratch.git your-awesome-site
 ```
 > If you already has the project and you need to download the submodules execute the command *git submodule update --init --recursive*
 3. Run:
