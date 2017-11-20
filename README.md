@@ -32,7 +32,7 @@ $ docker-compose down
 ## Dump the data.
 To create a backup to our database execute the follow command:
 ```bash
-$ docker-compose exec dbmysql sh -c 'export MYSQL_PWD="$MYSQL_ROOT_PASSWORD";exec mysqldump -uroot site' > ./scripts/database.sql
+$ docker-compose exec dbmysql sh -c 'export MYSQL_PWD="$MYSQL_ROOT_PASSWORD";exec mysqldump -uroot site | gzip -9 -c > /docker-entrypoint-initdb.d/database.sql.gz'
 ```
 
 ## Using an existent mysqldb
