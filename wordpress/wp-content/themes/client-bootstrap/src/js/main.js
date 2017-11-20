@@ -1,4 +1,5 @@
 'use strict';
 
-var $ = require('jquery');
-var slick = require('slick-carousel-browserify');
+$(document).ready(function() {
+    console.log('Ready!');
+});

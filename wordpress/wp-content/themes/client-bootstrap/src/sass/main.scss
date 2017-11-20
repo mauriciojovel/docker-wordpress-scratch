@@ -1,48 +1,16 @@
 // Vendors
-@import "vendors/bootstrap-variables";
 @import "vendors/bootstrap";
-@import "slick-carousel-browserify/slick/slick-theme.scss";
-@import "slick-carousel-browserify/slick/slick.scss";
-@import "sass-burger/burger";
-
-// Base
-@import "base/variables";
-@import "base/typography";
-// @import "base/helpers";
-
-// Partials
-// @import "partials/header";
-// @import "partials/footer";
-// @import "partials/section";
-
-// Components
-// @import "components/button";
-// @import "components/hero";
-// @import "components/logo";
-// @import "components/menu";
-// @import "components/widget";
-// @import "components/icon";
-// @import "components/carousel";
-// @import "components/block";
-// @import "components/thumbnail";
-// @import "components/card";
-// @import "components/form";
+@import "bootstrap/scss/bootstrap";
 
 body {
-  font-size: $font-size-base;
-  font-family: $font-family-base;
-  line-height: 1.5;
+  padding-top: 5rem;
+}
+.starter-template {
+  padding: 3rem 1.5rem;
+  text-align: center;
 }
 
-a {
-  color: $red;
-  &:hover {
-    text-decoration: none;
-    color: $red;
-  }
-}
-
-.container--small {
-  max-width: 720px;
-  margin: 0 auto;
+.logo {
+  width: 100px;
+  height: 40px
 }

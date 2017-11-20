@@ -19,7 +19,7 @@ services:
     volumes_from:
      - wordpress
     ports:
-     - 80:80
+     - 8080:80
     environment:
       POST_MAX_SIZE: 128m
   dbmysql:
@@ -43,4 +43,3 @@ services:
       - 3001:3001
     volumes:
       - ./wordpress/wp-content/themes/client-bootstrap:/app
-
