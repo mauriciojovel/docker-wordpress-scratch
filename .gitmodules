@@ -1,0 +1,3 @@
+[submodule "src/plugins/advanced-custom-fields-pro"]
+	path = src/plugins/advanced-custom-fields-pro
+	url = git@github.com:wp-premium/advanced-custom-fields-pro.git

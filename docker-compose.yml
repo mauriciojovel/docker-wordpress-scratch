@@ -5,7 +5,7 @@ services:
     links:
       - dbmysql:mysql
     volumes:
-      - ./wordpress:/var/www/html
+      - ./src:/var/www/html/wp-content
     environment:
       WORDPRESS_DB_USER: wordpress
       WORDPRESS_DB_PASSWORD: wordpress
@@ -42,4 +42,4 @@ services:
       - 3000:3000
       - 3001:3001
     volumes:
-      - ./wordpress/wp-content/themes/client-bootstrap:/app
+      - ./src/themes/client-bootstrap/src:/app
